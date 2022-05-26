@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+
+#nav-link {
+    color:darkred;
+}
+
+.li_bolada {
+    margin-right: 3px;
+    padding-right: 3px;
+}
