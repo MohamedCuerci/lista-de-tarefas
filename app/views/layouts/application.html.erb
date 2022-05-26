@@ -37,9 +37,11 @@
     
     #aki
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="container text-center">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
 
-    <%= yield %>
   </body>
 </html>
