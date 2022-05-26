@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+      
+      <h1 class="text-left">Lista de itens criados</h1>
+      <br>
+      <% if @items.empty? %>
+          <p>Ainda não existem itens aki</p>
+      <% else %>
+          <% @items.each do |item| %>
+          <h2><%= link_to item.title, item %></h2>
+          <p><%= item.created_at %></p>
+          <% end %>
+      <% end %>
+    
+    </div>
+    <div class="col">
+      <%= link_to "Novo item", new_item_path %>
+    </div>
+  </div>
+</div>
