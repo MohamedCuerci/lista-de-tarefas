@@ -9,13 +9,22 @@
             <p>Você ainda não criou nenhum itens aki</p>
         <% else %>
             <% @items.each do |item| %>
-            <h2><%= link_to item.title, item %></h2>
-            <p><%= item.created_at %></p>
+              <% if (item.status == "false") %>
+                <h2 class="text-left"><%= link_to item.title, item %></h2>
+                <p class="text-left"><%= time_ago_in_words(item.created_at) %> atrás</p>
+                <hr>
+              <% else %>
+                <s>  
+                  <h2 class="text-left"><%= link_to item.title, item %></h2>
+                  <p class="text-left">concluido <%= time_ago_in_words(item.updated_at) %> atrás </p>
+                  <hr>
+                </s>
+              <% end %>
             <% end %>
         <% end %>
       </div>
       <div class="col">
-        <%= link_to "Novo item", new_item_path %>
+        <%= link_to "Novo item", new_item_path, class: "btn btn-outline-dark" %>
       </div>      
     </div>
   </div>

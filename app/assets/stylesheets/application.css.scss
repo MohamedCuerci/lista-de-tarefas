@@ -14,12 +14,33 @@
  *= require_self
  */
 
+@import "bootstrap";
 
-#nav-link {
-    color:darkred;
+nav {
+    background-color: $green-500;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
 }
 
-.li_bolada {
-    margin-right: 3px;
-    padding-right: 3px;
+a {
+    text-decoration: none;
+    color: darken(#e7e7e7, 70%);
+}
+
+#navbar-header {
+    text-decoration: none;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color:lightgreen;
+}
+
+li {
+    text-decoration: none;
+}
+
+body {
+    background-color: $teal-500;
+
 }

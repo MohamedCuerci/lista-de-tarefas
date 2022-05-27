@@ -45,14 +45,9 @@ class ItemsController < ApplicationController
     
     def destroy
       @item = Item.find(params[:id])
+      @item.destroy
       
-      if @item.destroy
-        flash[:success] = 'Item was successfully deleted.'
-        redirect_to root_path
-      else
-        flash[:error] = 'Alguma coisa deu erro' 
-        redirect_to items_path
-      end
+      redirect_to root_path, status: :see_other
     end
     
     def complete
@@ -63,6 +58,6 @@ class ItemsController < ApplicationController
 
     private
       def item_params
-        params.require(:item).permit(:title, :description)
+        params.require(:item).permit(:title, :description, :status)
       end
 end
