@@ -5,20 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.0.4
 
-* System dependencies
+* Rails version: 7.0.3
 
-* Configuration
+* Gems adicionais: Devise, Bootstrap, Sassc-rails, rspec-rails
 
-* Database creation
+* Db: SQLite 1.4
+  
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
